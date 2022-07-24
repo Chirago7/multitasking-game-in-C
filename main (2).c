@@ -1,14 +1,18 @@
+
 #include <stdio.h>
 #include<stdlib.h>
 #include <time.h>
 #include <unistd.h>
-
+#include <windows.h>
 
 
 
 /////////////////  MINI COMEDK GK QUIZ CODE////////////////////////////////////
 
-
+void beep()
+{
+    Beep(600,2000);
+}
 
 
 void quiz()
@@ -32,28 +36,43 @@ void quiz()
 		start=time(NULL);
 		scanf("%d",&c);
 		if(c==1)
+		{
 		i++;
+		beep();
+		}
 		printf("\nQ2) The language of Lakshadweep, a Union Territory of India is ?");
         printf ("\n[1] TAMIL \n[2] HINDI \n[3] MALYALAM \n[4] TELUGU\n");
         scanf("%d",&c);
         if(c==3)
+        {
         i++;
+        beep();
+        }
 		printf("\nQ3) In which group of places Kumbha Mela is held every twelve years ?");
         printf("\n[1] UJJAIN,PURI,PRAYAG,HARIDWAR \n[2] PRAYAG,HARIDWAR,UJJAIN,NASIK \n[3] RAMESHWARAM,PURI,BADRINATH,DWARIKA \n[4] CHITTRAKOOT,UJJAIN,BADRINATH,DWARIKA\n");
         scanf("%d",&c);
         if(c==2)
+        {
         i++;
+        beep();
+        }
         printf ("\nQ4) Bahubali festival is related to ?");
         printf ("\n[1] ISLAM \n[2] HINDUISM \n[3] BUDDHISM \n[4] JAINISM\n");
         scanf("%d",&c);
         if (c==4)
+        {
         i++;
+        beep();
+        }
         printf ("\nQ5) Which day is observed as the World's Standard Day ?");
         printf ("\n[1] JUNE 26 \n[2] OCT 14 \n[3] NOV 15 \n[4] DEC 2\n");
         scanf("%d",&c);
         end=time(NULL);
         if(c==2)
+        {
         i++;
+        beep();
+        }
         d=difftime(end,start);
         if(d>20)
         {
@@ -68,28 +87,43 @@ void quiz()
             start=time(NULL);
             scanf("%d",&c);
             if(c==1)
+            {
             i++;
+            beep();
+            }
             printf ("\nQ7) Which player has scored the most ducks in international cricket ?");
             printf ("\n[1] MUTTIAH MURALITHARAN \n[2] JAMES ANDERSON \n[3] COURTNEY WALSH \n[4] BRETT LEE\n");
             scanf("%d",&c);
             if(c==1)
+            {
             i++;
+            beep();
+            }
             printf ("\nQ8) Which of the following is/are the symptoms of Black Fungus ?\n1. Facial Swelling\n2. Nasal Congestion\n3. Headache");
             printf ("\n[1] Only 1 \n[2] Only 2\n[3] Both 2 and 3\n[4] 1,2 and 3\n");
             scanf("%d",&c);
             if(c==4)
+            {
             i++;
+            beep();
+            }
             printf ("\nQ9) Author of Around the World in Eighty Days");
             printf ("\n[1] WILLIAM SHAKESPEARE \n[2] B. RICHARD \n[3] V. S. NAIPAUL\n[4] D. JULES VERNE\n");
             scanf("%d",&c);
             if(c==4)
+            {
             i++;
+            beep();
+            }
             printf ("\nQ10) Who wrote the Book Gandhi and Stalin");
             printf ("\n[1] RAJ NARAYAN \n[2] LOUIS FISHER \n[3] V. S. NAIPAUL\n[4] C. ANITA DESAI\n");
             scanf("%d",&c);
             end=time(NULL);
             if(c==2)
+            {
             i++;
+            beep();
+            }
             d=difftime(end,start);
             if(d>30)
             {
@@ -108,7 +142,10 @@ void quiz()
                if(d>20)
                x++;
                else if(c==2)
+               {
                i++;
+               beep();
+               }
                printf ("\nQ12) Abdul Kalam Azad became the ____ President of India. ?");
                printf ("\n[1] 9th \n[2] 10th \n[3] 11th \n[4] 12th \n");
                start=time(NULL);
@@ -118,7 +155,10 @@ void quiz()
                if(d>20)
                x++;
                else if(c==3)
+               {
                i++;
+               beep();
+               }
                printf ("\nQ13) The jurisdiction covering the Andaman and Nicobar islands falls under the supervision of __: ?");
                printf ("\n[1]  A circuit bench of the Bombay High Court at Port Blair \n[2]  A circuit bench of the Madras High Court at Port Blair \n[3]  A circuit bench of the Calcutta High Court at Port Blair \n[4]  A circuit bench of the Supreme Court of India at Port Blair \n");
                start=time(NULL);
@@ -128,7 +168,10 @@ void quiz()
                if(d>20)
                x++;
                else if(c==3)
+               {
                i++;
+               beep();
+               }
                printf ("\nQ14) Where did British first open their factories in Eastern part of India ?");
                printf ("\n[1] Assam \n[2] Orissa \n[3] Bihar \n[4] Sikkim \n");
                start=time(NULL);
@@ -138,7 +181,10 @@ void quiz()
                if(d>20)
                x++;
                else if(c==2)
+               {
                i++;
+               beep();
+               }
                printf ("\nQ15) During the colonial rule in India, the Permanent Settlement was introduced by ?");
                printf ("\n[1]  Lord Bentick \n[2]  Lord Cornwallis \n[3]  Lord Curzon \n[4]  Lord Wellesely \n");
                start=time(NULL);
@@ -148,7 +194,10 @@ void quiz()
                if(d>20)
                x++;
                else if(c==2)
+               {
                i++;
+               beep();
+               }
                t=(i*4)+((5-i)*-1)+(x*-1);
                printf ("\nThankyou for taking the quiz\nYour total score is %d out of 60\n",t);
             }
@@ -512,7 +561,7 @@ icounter--;
       
 sleep (1);
       
-system ("clear");
+ 
     
 }
   
@@ -729,7 +778,7 @@ void countdown_qz(int start)
        printf("\n\t0:0:%d",start);
        start--;
        sleep(1);
-       system("clear");
+        
 
    } 
    printf("\nTIME ****** UP");
@@ -765,7 +814,7 @@ sleep(5);
          marks=marks-1;
      }
 sleep(2);
-system("clear");    
+   
 printf(" Q2.solve   (6*3)+8/8 \n ");
 sleep(5);
 
@@ -785,7 +834,7 @@ sleep(5);
          marks=marks-1;
      }
 sleep(2);     
-system("clear");    
+     
 printf(" Q3.solve   (45/9)*8/2 \n ");
 sleep(5);
 
@@ -813,7 +862,7 @@ sleep(5);
     if (qr == 1)
 	
 	{
-	   system("clear");  
+	     
 	   timer_maths_quiz();
 	}
       
@@ -1153,7 +1202,7 @@ void minesweeper()
    }
    printf("Press any no. to continue\n");
    scanf("%d",&d4);
-   system("clear");
+    
    sleep(2);
    printf("\n\n\n");
    printf("\t\t                                             -------GOOD LUCK-------\n");
@@ -1163,7 +1212,7 @@ void minesweeper()
      sleep(1);
     
   scanf("%d",&d3);
-   system("clear");
+    
    printf("\n\n");
 for(i=0;i<6;i++)
 {
@@ -1251,7 +1300,7 @@ scanf("%d",&msres);
    if (msres == 1)
 	
 	{
-	   system("clear");  
+	      
 	   minesweeper();
 	}
       
@@ -1292,10 +1341,10 @@ printf("\n\n0.TO EXIT THE GAME PRESS 0\n");
 scanf("%d",&gc);
 if(gc==1)
 {
-  system ("clear");  
+   
   casino ();
-  system ("clear");
-  system ("clear");
+   
+   
   menu ();
 }
 else if(gc==2)
@@ -1307,9 +1356,9 @@ else if(gc==2)
 }
 else if(gc==3)
 {
-    system ("clear");
+     
     timer_maths_quiz();
-    system ("clear");
+      
     menu ();
 }
 else if(gc==4)
@@ -1322,30 +1371,31 @@ else if(gc==4)
     scanf("%d",&si);
     if(si==1)
     {
-        system ("clear");
+        
         sudoku66 ();
-        system ("clear");
+         
         menu ();
     }
     else if(si==0)
     {
-        system ("clear");
+         
         three();
-        system ("clear");
+         
         menu ();
     }
 }
 else if(gc==5)
 {
-    system ("clear");
+    
     minesweeper();
-    system ("clear");
+     
     menu ();
 }
 else
 {
     printf("\n\n                                                         THANKS FOR PLAYING \n\n");
-
+    printf("\nMADE BY : \n\n1.DHEERAJ\n2.CHIRAG\n3.ADITYA\n4.MANAS\n5.AMRIT\n6.ABHIRUP\n7.DEBAN\n8.HARSHA B\n9.MD NAJISH\n\n");
+}
   
 
 }
@@ -1358,9 +1408,14 @@ else
 
 int main()
 {
-    menu ();
+    menu();
     return 0;
 }
+
+
+
+
+
 
 
 
